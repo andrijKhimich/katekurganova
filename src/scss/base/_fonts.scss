@@ -1,4 +1,39 @@
-// @include font("Montserrat-Bold", "Montserrat-Bold", "400", "normal");
-// @include font("Montserrat-Medium", "Montserrat-Medium", "400", "normal");
-// @include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
-// @include font("Rubik-Bold", "Rubik-Bold", "400", "normal");
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vetrino';
+  src: url('../fonts/vetrino.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

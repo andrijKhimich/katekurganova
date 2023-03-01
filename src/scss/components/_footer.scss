@@ -1,1 +1,35 @@
 // footer
+.footer {
+  padding: 70px 0 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 100vw;
+    border-radius: 50%;
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .cta__links {
+      &:hover {
+        .icon-social {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

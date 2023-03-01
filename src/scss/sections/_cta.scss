@@ -1,0 +1,62 @@
+.cta {
+  padding: 64px 0;
+
+  &__box {
+    max-width: 490px;
+    margin: 0 auto;
+    border: 1px solid $black;
+    border-top-right-radius: 300px;
+    border-top-left-radius: 300px;
+    padding: 40px 80px;
+    text-align: center;
+  }
+
+  &__btns {
+    margin-bottom: 40px;
+    font-weight: 500;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    p {
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__links {
+    padding: 0 13px;
+    &:hover {
+      .icon-social {
+        fill: $primary;
+      }
+    }
+  }
+
+  &-list {
+    &__item {
+      position: relative;
+      padding-top: 30px;
+      letter-spacing: 0.02em;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svg/star.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}

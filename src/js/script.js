@@ -1,58 +1,70 @@
-const toggleMenu = () => {
-  const burger = document.querySelector(".js-burger");
-  const menu = document.querySelector(".js-header-nav");
-  const body = document.querySelector("body");
-  burger.addEventListener("click", () => {
-    if (!menu.classList.contains("active")) {
-      menu.classList.add("active");
-      burger.classList.add("active");
-      body.classList.add("locked");
-    } else {
-      menu.classList.remove("active");
-      burger.classList.remove("active");
-      body.classList.remove("locked");
-    }
-  });
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 992) {
-      menu.classList.remove("active");
-      burger.classList.remove("active");
-      body.classList.remove("locked");
-    }
-  })
-}
-toggleMenu();
-
-// const fixedHeader = () => {
-//   const header = document.querySelector(".header");
-//   const startPoint = 1;
-//   if (window.scrollY >= startPoint) {
-//     header.classList.add("fixed");
-//   } else {
-//     header.classList.remove("fixed");
-//   }
-// }
-
-// window.addEventListener("scroll", fixedHeader);
-
-
-// check if browser support webp format for images
-const testWebP = (callback) => {
-  let webP = new Image();
-  webP.onload = webP.onerror = function () {
-    callback(webP.height === 2);
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP((support) => {
-  if (support === true) {
-    document.querySelector("body").classList.add("webp");
-  } else {
-    document.querySelector("body").classList.add("no-webp");
+// TODO: delay before slide change
+var swiper = new Swiper(".testimonials-slider", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  spaceBetween: 0,
+  // preventClicks: true,
+  // preventClicksPropagation: true,
+  // slideToClickedSlide: true,
+  lazy: true,
+  speed: 1000,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: false,
+      translate: ["0%", 0, -1],
+      opacity: 0,
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
   }
 });
 
-// run for sprite svg support 
+
+// faq accordion 
+const accordion = () => {
+  let buttons = document.querySelectorAll(".accordion__btn");
+  // let i;
+
+  const removeActiveClass = () => {
+    buttons.forEach(button => {
+      // let panel = button.nextElementSibling;
+      button.classList.remove("active");
+      console.log(button)
+      // panel.style.maxHeight = null;
+      // panel.style.opacity = 0;
+    });
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", (e) => {
+      let panel = button.nextElementSibling;
+      if (button.classList.contains("active")) {
+        console.log('remove');
+        removeActiveClass();
+        this.classList.add("active");
+        // button.classList.remove("active");
+        // panel.style.maxHeight = panel.scrollHeight + "px";
+        // panel.style.opacity = 1;
+      } else {
+        console.log('add')
+        button.classList.add("active");
+        // removeActiveClass()
+      }
+    });
+  });
+
+}
+accordion()
+// // run for sprite svg support 
 svg4everybody();

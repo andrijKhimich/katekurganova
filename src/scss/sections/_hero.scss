@@ -1,0 +1,17 @@
+.hero {
+  padding-top: 4px;
+  &__title {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  &__img {
+    max-width: 490px;
+    margin: 0 auto;
+    position: relative;
+    transform: translate(0, -63px);
+    border-top-right-radius: 300px;
+    border-top-left-radius: 300px;
+    overflow: hidden;
+  }
+}

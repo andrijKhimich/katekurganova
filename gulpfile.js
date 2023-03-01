@@ -104,6 +104,7 @@ const js = () => {
 
       // modal
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+      "node_modules/swiper/swiper-bundle.min.js"
 
       // tooltips
       // "node_modules/@popperjs/core/dist/umd/popper.min.js",
@@ -182,8 +183,8 @@ const svgSprite = () => {
     .pipe(
       cheerio({
         run: function ($) {
-          // $("[fill]").removeAttr("fill");
-          // $("[stroke]").removeAttr("stroke");
+          $("[fill]").removeAttr("fill");
+          $("[stroke]").removeAttr("stroke");
           $("[style]").removeAttr("style");
           $("[class]").removeAttr("class");
           $("[width]").removeAttr("width");

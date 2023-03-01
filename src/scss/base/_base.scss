@@ -8,15 +8,16 @@
 
 html {
   font-size: 100%;
-  line-height: 1.15; // Correct the line height in all browsers.
+  line-height: 1.3; // Correct the line height in all browsers.
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
 }
 
 body {
   margin: 0; // Remove the margin in all browsers.
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
   color: $black;
+  background-color: #F5F4F4;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -26,7 +27,14 @@ body {
   -webkit-text-size-adjust: 100%;
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
-  background-color: pink;
+
+  @include d(768) {
+    font-size: 16px;
+  }
+
+  @include d(340) {
+    font-size: 14px;
+  }
 }
 
 // custom scrollbar
@@ -59,35 +67,41 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
-  // font-family: $font-primary;
+  font-family: 'Vetrino', sans-serif;
+  line-height: 1.08em;
 }
 
-h1 {
-  font-size: 100px;
-  line-height: .8em;
-}
-
+h1,
 h2 {
-  line-height: 1em;
+  font-size: 56px;
+  line-height: 1.08em;
+
+  @include d(768) {
+    font-size: 36px;
+  }
+
+  @include d(360) {
+    font-size: 26px;
+  }
+
+  span {
+    color: $primary;
+  }
 }
 
 h3 {
-  line-height: 1em;
+  font-size: 36px;
+  margin-bottom: 23px;
+
+  @include d(340) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
 }
 
 h4 {
-  font-size: 40px;
-  line-height: 1em;
-}
-
-h5 {
-  font-size: 24px;
-  line-height: 1em;
-}
-
-h6 {
-  font-size: 16px;
-  line-height: 1em;
+  font-size: 34px;
+  margin-bottom: 8px;
 }
 
 hr {
@@ -292,9 +306,7 @@ template {
 
 p,
 li {
-  line-height: 1.5em;
   margin: 0;
-  font-size: 16px;
   color: inherit;
 }
 
@@ -303,10 +315,6 @@ ol {
   list-style: none;
   padding-left: 0;
   margin: 0;
-
-  li {
-    list-style-type: none;
-  }
 }
 
 section.section {
@@ -406,7 +414,7 @@ input {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -427,7 +435,7 @@ main {
 }
 
 .title-2 {
-  @extend h2;
+  @extend h1;
 }
 
 .title-3 {
@@ -444,4 +452,58 @@ main {
 
 .title-6 {
   @extend h6;
+}
+
+.icon-social {
+  width: 25px;
+  height: 25px;
+  transition: fill $hover-duration $timing;
+}
+
+.icon-arrow {
+  width: 48px;
+  height: 32px;
+  stroke: $black;
+  fill: none;
+  transition: stroke $hover-duration $timing;
+}
+
+.btn-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: $primary;
+  padding: 0;
+}
+
+.plus {
+  width: 24px;
+  height: 24px;
+  background-color: $primary;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  margin-right: 9px;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  &::before {
+    width: 10px;
+    height: 1px;
+  }
+
+  &::after {
+    width: 1px;
+    height: 10px;
+  }
 }

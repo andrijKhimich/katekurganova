@@ -1,0 +1,52 @@
+.faq {
+  padding: 55px 0 150px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.accordion__item {
+  flex: 0 0 50%;
+  max-width: 488px;
+  // margin-bottom: 20px;
+  border-bottom: 1px solid $black;
+
+}
+
+.accordion__btn {
+  color: $black;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: $hover-duration;
+  padding: 20px 30px 20px 0;
+  font-weight: 500;
+  // min-height: 47px;
+}
+
+.active,
+.accordion__btn:hover {
+  // background-color: #ccc;
+}
+
+.accordion__panel {
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height $hover-duration $timing, opacity $hover-duration $timing;
+
+  p {
+    margin-bottom: 20px;
+  }
+}

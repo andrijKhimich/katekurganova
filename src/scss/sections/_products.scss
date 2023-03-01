@@ -1,0 +1,157 @@
+.products {
+  padding: 172px 0 10px 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__col {
+    flex: 0 0 518px;
+    padding: 0 15px;
+    margin-bottom: 167px;
+  }
+
+
+}
+
+.product {
+
+  &-card {
+    max-width: 488px;
+    position: relative;
+    border: 1px solid $black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    &__body {
+      padding: 95px 32px 0 32px;
+    }
+
+    &__img {
+      width: 140px;
+      height: 140px;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+      transform: translate(-50%, 0);
+
+      @include d(360) {
+        width: 108px;
+        height: 108px;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+
+      h4 {
+        color: $primary;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    &__benefits {}
+
+    &__list {
+      font-size: 16px;
+      line-height: 1.4;
+      max-height: 200px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      li {
+        position: relative;
+        padding-left: 26px;
+
+        &::before {
+          content: "";
+          width: 3px;
+          height: 3px;
+          background-color: $black;
+          position: absolute;
+          top: 9px;
+          left: 12px;
+          border-radius: 50%;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 21px;
+        }
+      }
+    }
+
+    &__more {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 45px;
+    }
+
+    &__footer {
+      text-align: center;
+      margin-bottom: 26px;
+
+      &>p {
+        font-family: "Raleway", sans-serif;
+        opacity: 0.5;
+        font-size: 16px;
+      }
+    }
+
+    &__price {
+      font-family: 'Vetrino', sans-serif;
+      font-size: 28px;
+
+      p {
+        &:first-child {
+          font-family: 'Vetrino', sans-serif;
+          font-size: 28px;
+          margin-bottom: 12px;
+
+          @include d(360) {
+            font-size: 18px;
+          }
+        }
+
+        &:not(:first-child) {
+          font-size: 16px;
+          font-family: "Raleway", sans-serif;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        font-family: "Raleway", sans-serif;
+        opacity: 0.5;
+      }
+    }
+
+    &__btn {
+      padding: 0;
+      border-top: 1px solid $black;
+      height: 87px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      width: 100%;
+      transition: background-color $hover-duration $timing;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
