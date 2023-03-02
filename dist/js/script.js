@@ -1,13 +1,68 @@
 "use strict";
 
+//Init Scrollbar
+
+jarallax(document.querySelectorAll('.jarallax'), {
+  speed: -0.5
+});
+var isMobile = window.innerWidth < 1280;
+if (!isMobile) {
+  var $app = document.querySelector('.global-wrapper');
+  window.appScrollBar = Scrollbar.init($app);
+  ScrollTrigger.scrollerProxy($app, {
+    scrollTop: function scrollTop(value) {
+      if (arguments.length) appScrollBar.scrollTop = value;
+      return appScrollBar.scrollTop;
+    },
+    getBoundingClientRect: function getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    }
+  });
+  ScrollTrigger.refresh();
+}
+var scrollTopPos = 0;
+if (!isMobile) {
+  window.appScrollBar.addListener(function () {
+    scrollTopPos = window.appScrollBar.scrollTop;
+  });
+} else {
+  scrollTopPos = window.scrollY;
+  document.addEventListener('scroll', function () {
+    scrollTopPos = window.scrollY;
+  });
+}
+
+// in-view detect
+!function () {
+  setTimeout(function () {
+    var blocks = document.querySelectorAll('.in-view-detect');
+    [].forEach.call(blocks, function ($item) {
+      function onScroll() {
+        if ($item.getBoundingClientRect().top - window.innerHeight <= $item.offsetHeight * -1 / 4 && !$item.classList.contains('in-view')) {
+          $item.classList.remove('in-view-detect');
+          $item.classList.add('in-view');
+        }
+      }
+      onScroll();
+      if (!isMobile) {
+        appScrollBar.addListener(onScroll);
+      } else {
+        document.addEventListener('scroll', onScroll);
+      }
+    });
+  }, 1200);
+}();
+
 // TODO: delay before slide change
 var swiper = new Swiper(".testimonials-slider", {
   slidesPerView: 1,
   centeredSlides: false,
   spaceBetween: 0,
-  // preventClicks: true,
-  // preventClicksPropagation: true,
-  // slideToClickedSlide: true,
   lazy: true,
   speed: 1000,
   pagination: {

@@ -104,7 +104,11 @@ const js = () => {
 
       // modal
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
-      "node_modules/swiper/swiper-bundle.min.js"
+      "node_modules/swiper/swiper-bundle.min.js",
+      // "node_modules/gsap/gsap-core.js",
+
+      "src/libs/gsap-and-scrollTrigger.js",
+      "src/libs/jarallax.min.js"
 
       // tooltips
       // "node_modules/@popperjs/core/dist/umd/popper.min.js",

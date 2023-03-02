@@ -67,10 +67,13 @@
       // width: 100% !important;
     }
     &__navigation {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 35px;
+     
+      @include d(768) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 35px;
+      }
     }
     &__btns {
       position: absolute;
