@@ -1,25 +1,46 @@
 .about {
   padding: 59px 0;
   position: relative;
-
+  @include d(768) {
+    padding: 50px 0;
+  }
   &__wrapper {
     position: relative;
+    padding-top: 100px;
   }
 
   &__content {
     margin-left: 55px;
     max-width: 615px;
+
+    @include d(768) {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__box {
     max-width: 330px;
+    
+    @include d(768) {
+      max-width: 100%;
+      text-align: center;
+    }
 
     &:first-child {
       max-width: 430px;
+
+      @include d(768) {
+        max-width: 100%;
+      }
     }
 
     &:not(:last-child) {
       margin-bottom: 64px;
+
+      @include d(768) {
+        margin-bottom: 48px;
+      }
     }
 
     &:nth-child(even) {
@@ -38,5 +59,12 @@
     max-width: 455px;
     right: 40px;
     top: 40px;
+    @include d(768) {
+      right: auto;
+      top: 0;
+      max-width: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
-}
+} 

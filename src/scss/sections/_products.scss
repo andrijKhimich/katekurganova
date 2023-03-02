@@ -1,20 +1,32 @@
 .products {
   padding: 172px 0 10px 0;
 
+  @include d(768) {
+    padding: 100px 0 10px 0;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 -15px;
+
+    @include d(768) {
+      justify-content: center;
+    }
   }
 
   &__col {
     flex: 0 0 518px;
     padding: 0 15px;
     margin-bottom: 167px;
+    max-width: 50%;
+
+    @include d(768) {
+      max-width: 100%;
+      margin-bottom: 130px;
+    }
   }
-
-
 }
 
 .product {
@@ -30,6 +42,10 @@
 
     &__body {
       padding: 95px 32px 0 32px;
+
+      @include d(992) {
+        padding: 90px 15px 0 15px;
+      }
     }
 
     &__img {
@@ -69,10 +85,15 @@
       max-height: 200px;
       overflow: hidden;
       margin-bottom: 24px;
+      transition: max-height $hover-duration $timing;
 
       li {
         position: relative;
         padding-left: 26px;
+
+        @include d(768) {
+          padding-left: 10px;
+        }
 
         &::before {
           content: "";
@@ -83,6 +104,10 @@
           top: 9px;
           left: 12px;
           border-radius: 50%;
+
+          @include d(768) {
+            left: 0;
+          }
         }
 
         &:not(:last-child) {

@@ -1,6 +1,5 @@
 "use strict";
 
-var _this = void 0;
 // TODO: delay before slide change
 var swiper = new Swiper(".testimonials-slider", {
   slidesPerView: 1,
@@ -34,39 +33,48 @@ var swiper = new Swiper(".testimonials-slider", {
 });
 
 // faq accordion 
-var accordion = function accordion() {
-  var buttons = document.querySelectorAll(".accordion__btn");
-  // let i;
-
-  var removeActiveClass = function removeActiveClass() {
-    buttons.forEach(function (button) {
-      // let panel = button.nextElementSibling;
-      button.classList.remove("active");
-      console.log(button);
-      // panel.style.maxHeight = null;
-      // panel.style.opacity = 0;
-    });
+var accordions = document.querySelectorAll(".accordion__item");
+var openAccordion = function openAccordion(accordion) {
+  var content = accordion.querySelector(".accordion__panel");
+  accordion.classList.add("active");
+  content.style.maxHeight = content.scrollHeight + "px";
+  content.style.opacity = 1;
+};
+var closeAccordion = function closeAccordion(accordion) {
+  var content = accordion.querySelector(".accordion__panel");
+  accordion.classList.remove("active");
+  content.style.maxHeight = null;
+  content.style.opacity = 0;
+};
+accordions.forEach(function (accordion) {
+  var intro = accordion.querySelector(".accordion__btn");
+  var content = accordion.querySelector(".accordion__panel");
+  intro.onclick = function () {
+    if (content.style.maxHeight) {
+      closeAccordion(accordion);
+    } else {
+      accordions.forEach(function (accordion) {
+        return closeAccordion(accordion);
+      });
+      openAccordion(accordion);
+    }
   };
-
+});
+var showMoreText = function showMoreText() {
+  var buttons = document.querySelectorAll('.btn-more');
   buttons.forEach(function (button) {
-    button.addEventListener("click", function (e) {
-      var panel = button.nextElementSibling;
-      if (button.classList.contains("active")) {
-        console.log('remove');
-        removeActiveClass();
-        _this.classList.add("active");
-        // button.classList.remove("active");
-        // panel.style.maxHeight = panel.scrollHeight + "px";
-        // panel.style.opacity = 1;
+    button.addEventListener('click', function () {
+      console.log('show');
+      button.classList.toggle('active');
+      var text = button.parentElement.previousElementSibling;
+      if (text.style.maxHeight) {
+        text.style.maxHeight = null;
       } else {
-        console.log('add');
-        button.classList.add("active");
-        // removeActiveClass()
+        text.style.maxHeight = text.scrollHeight + "px";
       }
     });
   });
 };
-
-accordion();
+showMoreText();
 // // run for sprite svg support 
 svg4everybody();

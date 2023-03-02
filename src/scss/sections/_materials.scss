@@ -1,6 +1,11 @@
 .materials {
   padding: 190px 0 100px 0;
-
+  @include d(992) {
+    padding: 100px 0;
+  }
+  @include d(768) {
+    padding: 90px 0 20px 0  ;
+  }
   &__title {
     margin: 0 auto;
     text-align: center;
@@ -29,6 +34,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include d(768) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   &__box {
@@ -39,7 +49,11 @@
     padding: 0 15px;
     transition: color $hover-duration $timing;
     font-weight: 500;
-
+    @include d(768) {
+      // max-width: 100%;
+      // flex: 0 0 100%;
+      margin-bottom: 32px;
+    }
     &:hover {
       color: $primary;
     }

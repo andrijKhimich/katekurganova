@@ -23,7 +23,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-
+    @include d(768) {
+      margin-bottom: 20px;
+    }
     .cta__links {
       &:hover {
         .icon-social {

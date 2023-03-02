@@ -1,9 +1,21 @@
 .faq {
   padding: 55px 0 150px;
 
+  @include d(992) {
+    padding: 50px 0 100px;
+  }
+
+  @include d(768) {
+    padding: 50px 0 70px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 72px;
+
+    @include d(768) {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -16,9 +28,19 @@
 .accordion__item {
   flex: 0 0 50%;
   max-width: 488px;
-  // margin-bottom: 20px;
   border-bottom: 1px solid $black;
 
+  @include d(992) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  &.active {
+    .plus_lg {
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
 }
 
 .accordion__btn {
@@ -31,6 +53,7 @@
   transition: $hover-duration;
   padding: 20px 30px 20px 0;
   font-weight: 500;
+  position: relative;
   // min-height: 47px;
 }
 
