@@ -65,7 +65,6 @@ if (!isMobile) {
   }, 1200)
 }();
 
-// TODO: delay before slide change
 let swiper = new Swiper(".testimonials-slider", {
   slidesPerView: 1,
   centeredSlides: false,

@@ -1,9 +1,11 @@
 .about {
   padding: 59px 0;
   position: relative;
+
   @include d(768) {
     padding: 50px 0;
   }
+
   &__wrapper {
     position: relative;
     padding-top: 100px;
@@ -21,7 +23,7 @@
 
   &__box {
     max-width: 330px;
-    
+    transition-delay: .6s;
     @include d(768) {
       max-width: 100%;
       text-align: center;
@@ -59,6 +61,8 @@
     max-width: 455px;
     right: 40px;
     top: 40px;
+    transition: opacity $duration $timing, transform $duration $timing;
+
     @include d(768) {
       right: auto;
       top: 0;
@@ -67,4 +71,4 @@
       transform: translate(-50%, 0);
     }
   }
-} 
+}

@@ -1,10 +1,14 @@
 .hero {
   padding-top: 4px;
+
   &__title {
     text-align: center;
     position: relative;
     z-index: 1;
+    max-width: 670px;
+    margin: 0 auto;
   }
+
   &__img {
     max-width: 490px;
     margin: 0 auto;

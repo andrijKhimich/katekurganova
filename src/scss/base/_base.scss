@@ -601,3 +601,17 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+
+.about__img.in-view-detect {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about__img.in-view {
+  opacity: 1;
+  transform: translateY(0);
+
+  @include d(768) {
+    transform: translate(-50%, 0);
+  }
+}

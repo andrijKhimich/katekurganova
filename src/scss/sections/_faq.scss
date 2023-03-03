@@ -20,14 +20,11 @@
 }
 
 .accordion {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .accordion__item {
-  flex: 0 0 50%;
-  max-width: 488px;
   border-bottom: 1px solid $black;
 
   @include d(992) {
