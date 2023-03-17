@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk-UA">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Katya Kurganova" />
-  <meta property="og:image" content="./img/preview.jpg" />
-  <!-- <meta property="og:description" content="DESCRIPTION OF YOUR SITE"/> -->
-  <!-- <meta property="og:url" content="URL OF YOUR WEBSITE"/> -->
+  <meta property="og:image" content="./img/preview.webp" />
+  <meta name="description" content="Katya Kurganova">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="627" />
   <!-- favicons -->
   <link rel="icon" href="img/favicon/favicon.ico" sizes="any"><!-- 32×32 -->
-  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.webp"><!-- 180×180 -->
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <!-- main styles -->
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./css/style.min.css"></noscript>
+
   <title>Katya | Kurganova</title>
 </head>
 
 <body>
   <div class="global-wrapper">
-    <div class="header in-view-detect anim-top">
+    <header class="header in-view-detect anim-top">
   <div class="header__row">
     <a href="index.html" class="header__logo">
-      <img src="img/logo.svg" class="logo" alt="katya_kurganova">
+      <img src="img/logo.svg" width="56" height="56" class="logo" alt="katya_kurganova">
       <p>katya_kurganova</p>
     </a>
     <div class="lang">
@@ -33,7 +34,7 @@
       <a class="lang__link" href="eng-index.html">En</a>
     </div>
   </div>
-</div>
+</header>
     <main class="main">
       <div class="hero">
         <div class="container">
@@ -42,7 +43,7 @@
               <h1>Зроби перший крок до <span>здорового способу життя</span> разом зі мною!</h1>
             </div>
             <div class="hero__img in-view-detect anim-top_lg">
-              <img src="./img/hero.jpg" alt="katya_kurganova">
+              <img width="490" height="1000" src="./img/hero.webp" alt="katya_kurganova" loading="lazy">
             </div>
           </div>
         </div>
@@ -52,12 +53,13 @@
           <div class="cta__box">
             <div class="cta__btns">
               <div class="cta__btns-row">
-                <a href="https://t.me/katya_kurganova" class="cta__links" target="_blank">
+                <a href="https://t.me/katya_kurganova" class="cta__links" aria-label="Link to telegram" target="_blank">
                   <svg class="icon-social">
                     <use xlink:href="img/svg/sprite.svg#telegram"></use>
                   </svg>
                 </a>
-                <a href="https://instagram.com/katya_kurganova" class="cta__links" target="_blank">
+                <a href="https://instagram.com/katya_kurganova" class="cta__links" aria-label="Link to instagram"
+                  target="_blank">
                   <svg class="icon-social">
                     <use xlink:href="img/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -83,7 +85,7 @@
           <div class="about__wrapper">
             <div class="about__content">
               <div class="about__box in-view-detect anim-top">
-                <h3>Допоможу</h3>
+                <h2 class="title-3">Допоможу</h2>
                 <p>Побудувати здорові стосунки з їжею і тілом, усвідомлено ставитись до теми режиму, харчування і
                   фізичних
                   навантажень, а також позбутися від зайвих кілограмів, зменшити обʼєми тіла та покращити як зовнішній,
@@ -103,7 +105,7 @@
               </div>
             </div>
             <div class="about__img in-view-detect">
-              <img src="./img/me.svg" alt="me">
+              <img width="456" height="1000" src="./img/me.svg" loading="lazy" alt="me">
             </div>
           </div>
         </div>
@@ -115,7 +117,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-1.png" alt="product">
+                    <img src="img/product-1.webp" width="140" height="1000" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Пакет </h4>
@@ -155,7 +157,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-2.png" alt="product">
+                    <img src="img/product-2.webp" width="140" height="1000" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Сімейний пакет </h4>
@@ -199,7 +201,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-3.png" alt="product">
+                    <img src="img/product-3.webp" width="140" height="1000" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Пакет </h4>
@@ -237,7 +239,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-4.png" alt="product">
+                    <img src="img/product-4.webp" width="140" height="1000" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Меню-конструктор </h4>
@@ -286,46 +288,46 @@
                 <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/1.png" alt="slide">
+                    <img src="./img/1.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/2.png" alt="slide">
+                    <img src="./img/2.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/3.png" alt="slide">
+                    <img src="./img/3.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/4.png" alt="slide">
+                    <img src="./img/4.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/5.png" alt="slide">
+                    <img src="./img/5.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/6.png" alt="slide">
+                    <img src="./img/6.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/7.png" alt="slide">
+                    <img src="./img/7.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/8.png" alt="slide">
+                    <img src="./img/8.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/9.png" alt="slide">
+                    <img src="./img/9.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/10.png" alt="slide">
+                    <img src="./img/10.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/11.png" alt="slide">
+                    <img src="./img/11.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/12.png" alt="slide">
+                    <img src="./img/12.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/13.png" alt="slide">
+                    <img src="./img/13.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/14.png" alt="slide">
+                    <img src="./img/14.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -357,16 +359,16 @@
           </div>
           <div class="materials__row in-view-detect anim-top">
             <a download href="./files/diet.pdf" class="materials__box">
-              <img src="./img/svg/pdf.svg" alt="pdf">
+              <img src="./img/svg/pdf.svg" alt="pdf" width="48" height="48" loading="lazy">
               <p>Раціон збалансованого харчування на тиждень</p>
             </a>
             <a download href="./files/sugar-stories.pdf" class="materials__box">
-              <img src="./img/svg/pdf.svg" alt="pdf">
+              <img src="./img/svg/pdf.svg" alt="pdf" width="48" height="48" loading="lazy">
               <p>Збірник «Цукрові історії.
                 Уся правда про білий цукор»</p>
             </a>
             <a target="_blank" href="https://www.youtube.com/watch?v=c7u_XOFeiv8" class="materials__box">
-              <img src="./img/svg/camera.svg" alt="pdf">
+              <img src="./img/svg/camera.svg" alt="video" width="48" height="48" loading="lazy">
               <p>Комплекс вправ, спрямований на покращення рельєфу ніг та сідниць</p>
             </a>
           </div>
@@ -444,12 +446,12 @@
     <div class="footer in-view-detect anim-top">
   <div class="container">
     <div class="footer__social">
-      <a href="https://t.me/katya_kurganova" class="cta__links" target="_blank">
+      <a href="https://t.me/katya_kurganova" class="cta__links" aria-label="Link to telegram" target="_blank">
         <svg class="icon-social">
           <use xlink:href="img/svg/sprite.svg#telegram"></use>
         </svg>
       </a>
-      <a href="https://instagram.com/katya_kurganova" class="cta__links" target="_blank">
+      <a href="https://instagram.com/katya_kurganova" class="cta__links" aria-label="Link to instagram" target="_blank">
         <svg class="icon-social">
           <use xlink:href="img/svg/sprite.svg#instagram"></use>
         </svg>

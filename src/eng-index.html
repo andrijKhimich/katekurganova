@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Katya Kurganova" />
   <meta property="og:image" content="./img/preview.jpg" />
-  <!-- <meta property="og:description" content="DESCRIPTION OF YOUR SITE"/> -->
-  <!-- <meta property="og:url" content="URL OF YOUR WEBSITE"/> -->
+  <meta name="description" content="Katya Kurganova">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="627" />
   <!-- favicons -->
@@ -16,7 +15,8 @@
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <!-- main styles -->
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./css/style.min.css"></noscript>
   <title>Katya | Kurganova</title>
 </head>
 
@@ -31,7 +31,7 @@
               <h1><span>Take</span> the first step towards a <span>healthy lifestyle</span> with me!</h1>
             </div>
             <div class="hero__img in-view-detect anim-top_lg">
-              <img src="./img/hero.jpg" alt="katya_kurganova">
+              <img width="490" height="1000" src="./img/hero.webp" alt="katya_kurganova" loading="lazy">
             </div>
           </div>
         </div>
@@ -41,12 +41,13 @@
           <div class="cta__box">
             <div class="cta__btns">
               <div class="cta__btns-row">
-                <a href="https://t.me/katya_kurganova" class="cta__links" target="_blank">
+                <a href="https://t.me/katya_kurganova" class="cta__links" aria-label="Link to telegram" target="_blank">
                   <svg class="icon-social">
                     <use xlink:href="img/svg/sprite.svg#telegram"></use>
                   </svg>
                 </a>
-                <a href="https://instagram.com/katya_kurganova" class="cta__links" target="_blank">
+                <a href="https://instagram.com/katya_kurganova" class="cta__links" aria-label="Link to instagram"
+                  target="_blank">
                   <svg class="icon-social">
                     <use xlink:href="img/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -71,7 +72,7 @@
           <div class="about__wrapper">
             <div class="about__content">
               <div class="about__box in-view-detect anim-top">
-                <h3>Will help you</h3>
+                <h2 class="title-2">Will help you</h2>
                 <p>Build a healthy relationship with food and body, consciously treat the topic of regime, nutrition and
                   physical activity, as well as get rid of extra kilos, reduce body volume and improve both the external
                   and internal state of the body.</p>
@@ -90,7 +91,7 @@
               </div>
             </div>
             <div class="about__img in-view-detect">
-              <img src="./img/me-eng.svg" alt="me">
+              <img width="456" height="1000" src="./img/me.svg" loading="lazy" alt="me">
             </div>
           </div>
         </div>
@@ -102,7 +103,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-1.png" alt="product">
+                    <img src="img/product-1.webp" width="140" height="140" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Package </h4>
@@ -143,7 +144,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-2.png" alt="product">
+                    <img src="img/product-2.webp" width="140" height="140" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Family Package </h4>
@@ -187,7 +188,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-3.png" alt="product">
+                    <img src="img/product-3.webp" width="140" height="140" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Package </h4>
@@ -225,7 +226,7 @@
               <div class="product-card">
                 <div class="product-card__body">
                   <div class="product-card__img">
-                    <img src="img/product-4.png" alt="product">
+                    <img src="img/product-4.webp" width="140" height="140" loading="lazy" alt="product">
                   </div>
                   <div class="product-card__title">
                     <h4>Menu-constructor </h4>
@@ -266,7 +267,7 @@
         <div class="container">
           <div class="testimonials__wrapper">
             <div class="testimonials__title in-view-detect anim-top">
-              <h2>Clients feedback 
+              <h2>Clients feedback
                 and results</h2>
             </div>
             <div class="testimonials-slider__wrapper in-view-detect anim-top">
@@ -275,46 +276,46 @@
                 <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/1.png" alt="slide">
+                    <img src="./img/1.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/2.png" alt="slide">
+                    <img src="./img/2.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/3.png" alt="slide">
+                    <img src="./img/3.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/4.png" alt="slide">
+                    <img src="./img/4.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/5.png" alt="slide">
+                    <img src="./img/5.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/6.png" alt="slide">
+                    <img src="./img/6.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/7.png" alt="slide">
+                    <img src="./img/7.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/8.png" alt="slide">
+                    <img src="./img/8.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/9.png" alt="slide">
+                    <img src="./img/9.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/10.png" alt="slide">
+                    <img src="./img/10.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/11.png" alt="slide">
+                    <img src="./img/11.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/12.png" alt="slide">
+                    <img src="./img/12.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/13.png" alt="slide">
+                    <img src="./img/13.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                   <div class="swiper-slide testimonials-slider__item">
-                    <img src="./img/14.png" alt="slide">
+                    <img src="./img/14.webp" alt="slide" width="486" height="1000" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -346,15 +347,15 @@
           </div>
           <div class="materials__row in-view-detect anim-top">
             <a download href="./files/diet.pdf" class="materials__box">
-              <img src="./img/svg/pdf.svg" alt="pdf">
+              <img src="./img/svg/pdf.svg" alt="pdf" width="48" height="48" loading="lazy">
               <p>A balanced diet for the week</p>
             </a>
             <a download href="./files/sugar-stories.pdf" class="materials__box">
-              <img src="./img/svg/pdf.svg" alt="pdf">
+              <img src="./img/svg/pdf.svg" alt="pdf" width="48" height="48" loading="lazy">
               <p>Collection "Sugar stories. The whole truth about white sugar"</p>
             </a>
             <a target="_blank" href="https://www.youtube.com/watch?v=c7u_XOFeiv8" class="materials__box">
-              <img src="./img/svg/camera.svg" alt="pdf">
+              <img src="./img/svg/camera.svg" alt="video" width="48" height="48" loading="lazy">
               <p>A set of exercises aimed at improving the relief of the legs and buttocks</p>
             </a>
           </div>
@@ -372,34 +373,48 @@
                   <span class="plus_lg"></span>
                 </button>
                 <div class="accordion__panel">
-                  <p>Individual work with a nutritionist is not a diet, not a marathon, but a balanced nutrition with delicious and varied dishes. In addition, your personal nutritionist is always in touch to help, prompt and advise on any issue.</p>
+                  <p>Individual work with a nutritionist is not a diet, not a marathon, but a balanced nutrition with
+                    delicious and varied dishes. In addition, your personal nutritionist is always in touch to help,
+                    prompt and advise on any issue.</p>
                 </div>
               </div>
               <div class="accordion__item">
-                <button class="accordion__btn">I don't have time to cook/often eat in food establishments. Is this work format suitable for me?<span class="plus_lg"></span></button>
+                <button class="accordion__btn">I don't have time to cook/often eat in food establishments. Is this work
+                  format suitable for me?<span class="plus_lg"></span></button>
                 <div class="accordion__panel">
-                  <p>When working, all your wishes and schedule are taken into account, our ration is adapted only to your needs. The main goal of working individually with each client is the saving of your time.
+                  <p>When working, all your wishes and schedule are taken into account, our ration is adapted only to
+                    your needs. The main goal of working individually with each client is the saving of your time.
                     It is possible to choose any meal from the establishment/delivery/cooking.</p>
                 </div>
               </div>
               <div class="accordion__item">
-                <button class="accordion__btn">What is the calorie intake of rations?<span class="plus_lg"></span></button>
-                <div class="accordion__panel">
-                  <p>Each person has an individual calorie intake and proteins, fats, carbohydrates, which is calculated by a professional specialist, taking into account such data as gender, age, height and level of physical activity.</p>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <button class="accordion__btn">Is it possible to lose weight by setting up a diet without adding workouts?<span
+                <button class="accordion__btn">What is the calorie intake of rations?<span
                     class="plus_lg"></span></button>
                 <div class="accordion__panel">
-                  <p>80% of success in the process of losing weight is a balanced nutrition. But if your goal is not only to get rid of extra kilos, but also to improve the relief of the body, elasticity and condition of the skin, strengthening the muscular corset, then I recommend adding physical activity.</p>
+                  <p>Each person has an individual calorie intake and proteins, fats, carbohydrates, which is calculated
+                    by a professional specialist, taking into account such data as gender, age, height and level of
+                    physical activity.</p>
                 </div>
               </div>
               <div class="accordion__item">
-                <button class="accordion__btn">Is this package needed to be extended after a month of work?<span class="plus_lg"></span></button>
+                <button class="accordion__btn">Is it possible to lose weight by setting up a diet without adding
+                  workouts?<span class="plus_lg"></span></button>
                 <div class="accordion__panel">
-                  <p>You focus only on your goals and wishes. Some people need 1-2 months of work, after which they realize that they are ready to continue on their own.
-                    Working with a personal nutritionist on a regular basis is a guarantee that you have a reliable support of a specialist who is always in touch, takes into account all your wishes and preferences; and it is also an opportunity to consult on any issue (even if it's in a supermarket, market, restaurant or food establishment).</p>
+                  <p>80% of success in the process of losing weight is a balanced nutrition. But if your goal is not
+                    only to get rid of extra kilos, but also to improve the relief of the body, elasticity and condition
+                    of the skin, strengthening the muscular corset, then I recommend adding physical activity.</p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button class="accordion__btn">Is this package needed to be extended after a month of work?<span
+                    class="plus_lg"></span></button>
+                <div class="accordion__panel">
+                  <p>You focus only on your goals and wishes. Some people need 1-2 months of work, after which they
+                    realize that they are ready to continue on their own.
+                    Working with a personal nutritionist on a regular basis is a guarantee that you have a reliable
+                    support of a specialist who is always in touch, takes into account all your wishes and preferences;
+                    and it is also an opportunity to consult on any issue (even if it's in a supermarket, market,
+                    restaurant or food establishment).</p>
                 </div>
               </div>
             </div>

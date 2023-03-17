@@ -62,6 +62,10 @@
         width: 108px;
         height: 108px;
       }
+      img {
+        height: 100%;
+        aspect-ratio: auto 4/3;
+      }
     }
 
     &__title {

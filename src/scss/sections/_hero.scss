@@ -17,5 +17,9 @@
     border-top-right-radius: 300px;
     border-top-left-radius: 300px;
     overflow: hidden;
+    img {
+      height: 100%;
+      aspect-ratio: auto 16/9;
+    }
   }
 }

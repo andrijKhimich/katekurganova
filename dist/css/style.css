@@ -605,7 +605,7 @@ main {
 }
 
 .anim-top_lg.in-view-detect {
-  opacity: 0;
+  opacity: 0.01;
   -webkit-transform: translateY(200px);
       -ms-transform: translateY(200px);
           transform: translateY(200px);
@@ -619,7 +619,7 @@ main {
 }
 
 .anim-top.in-view-detect {
-  opacity: 0;
+  opacity: 0.001;
   -webkit-transform: translateY(40px);
       -ms-transform: translateY(40px);
           transform: translateY(40px);
@@ -655,12 +655,18 @@ main {
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
-}
-
-.header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -776,6 +782,11 @@ main {
   overflow: hidden;
 }
 
+.hero__img img {
+  height: 100%;
+  aspect-ratio: auto 16/9;
+}
+
 .cta {
   padding: 64px 0;
 }
@@ -887,7 +898,7 @@ main {
 
 .about__img {
   position: absolute;
-  max-width: 455px;
+  max-width: 456px;
   right: 40px;
   top: 40px;
   -webkit-transition: opacity 1s cubic-bezier(0.17, 0.67, 0.55, 1.05), -webkit-transform 1s cubic-bezier(0.17, 0.67, 0.55, 1.05);
@@ -895,6 +906,11 @@ main {
   -o-transition: opacity 1s cubic-bezier(0.17, 0.67, 0.55, 1.05), transform 1s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   transition: opacity 1s cubic-bezier(0.17, 0.67, 0.55, 1.05), transform 1s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   transition: opacity 1s cubic-bezier(0.17, 0.67, 0.55, 1.05), transform 1s cubic-bezier(0.17, 0.67, 0.55, 1.05), -webkit-transform 1s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.about__img img {
+  aspect-ratio: auto 4/3;
+  height: 100%;
 }
 
 .products {
@@ -954,6 +970,11 @@ main {
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.product-card__img img {
+  height: 100%;
+  aspect-ratio: auto 4/3;
 }
 
 .product-card__title {
@@ -1126,6 +1147,11 @@ main {
   stroke: #FF9556;
 }
 
+.testimonials-slider__item img {
+  height: 100%;
+  aspect-ratio: auto 4/3;
+}
+
 .testimonials-slider__btns {
   position: absolute;
   bottom: 13px;
@@ -1205,6 +1231,7 @@ main {
   width: 48px;
   margin-bottom: 8px;
   margin: 0 auto 8px auto;
+  aspect-ratio: auto 4/3;
 }
 
 .faq {
