@@ -123,6 +123,19 @@ h4,
   margin-bottom: 8px;
 }
 
+.main-404{
+  text-align: center;
+  padding: 214px 0;
+}
+
+.text-404 h1{
+  font-size: 70px;
+  color: #2c363d;
+}
+.button-404 {
+  padding-top: 20px;
+  border: #FF9556;
+}
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
