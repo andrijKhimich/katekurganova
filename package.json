@@ -45,7 +45,7 @@
     "bracketSameLine": true,
     "jsxBracketSameLine": true,
     "tabWidth": 2,
-    "semi": false,
+    "semi": true,
     "singleQuote": true
   }
 }

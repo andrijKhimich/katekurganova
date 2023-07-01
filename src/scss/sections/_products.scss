@@ -30,7 +30,6 @@
 }
 
 .product {
-
   &-card {
     max-width: 488px;
     position: relative;
@@ -81,8 +80,6 @@
       }
     }
 
-    &__benefits {}
-
     &__list {
       font-size: 16px;
       line-height: 1.4;
@@ -100,7 +97,7 @@
         }
 
         &::before {
-          content: "";
+          content: '';
           width: 3px;
           height: 3px;
           background-color: $black;
@@ -130,8 +127,8 @@
       text-align: center;
       margin-bottom: 26px;
 
-      &>p {
-        font-family: "Raleway", sans-serif;
+      & > p {
+        font-family: 'Raleway', sans-serif;
         opacity: 0.5;
         font-size: 16px;
       }
@@ -142,6 +139,7 @@
       font-size: 28px;
 
       p {
+        opacity: 1 !important;
         &:first-child {
           font-family: 'Vetrino', sans-serif;
           font-size: 28px;
@@ -154,13 +152,13 @@
 
         &:not(:first-child) {
           font-size: 16px;
-          font-family: "Raleway", sans-serif;
+          font-family: 'Raleway', sans-serif;
         }
       }
 
       span {
         font-size: 16px;
-        font-family: "Raleway", sans-serif;
+        font-family: 'Raleway', sans-serif;
         opacity: 0.5;
       }
     }
@@ -182,5 +180,77 @@
         background-color: $primary;
       }
     }
+  }
+}
+
+/* Style the tab */
+.tab {
+  // overflow: hidden;
+  // border: 1px solid #ccc;
+  // background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab__link {
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 14px 6px 14px;
+  text-align: center;
+  color: $black;
+  border: 1px solid $black;
+  border-radius: 32px;
+  height: 32px;
+}
+
+/* Create an active/current tablink class */
+.tab__link.active {
+  background-color: $primary;
+  color: $white;
+  border-color: $primary;
+  // font-weight: 600;
+}
+
+/* Style the tab content */
+.tab__content {
+  display: none;
+  padding-top: 32px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  p {
+    opacity: 0.5;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &.active {
+    display: block;
+  }
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

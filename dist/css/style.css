@@ -123,19 +123,6 @@ h4,
   margin-bottom: 8px;
 }
 
-.main-404{
-  text-align: center;
-  padding: 214px 0;
-}
-
-.text-404 h1{
-  font-size: 70px;
-  color: #2c363d;
-}
-.button-404 {
-  padding-top: 20px;
-  border: #FF9556;
-}
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -1061,6 +1048,10 @@ main {
   font-size: 28px;
 }
 
+.product-card__price p {
+  opacity: 1 !important;
+}
+
 .product-card__price p:first-child {
   font-family: "Vetrino", sans-serif;
   font-size: 28px;
@@ -1102,6 +1093,90 @@ main {
 
 .product-card__btn:hover {
   background-color: #FF9556;
+}
+
+/* Style the tab */
+
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+/* Style the buttons inside the tab */
+
+.tab__link {
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 14px 6px 14px;
+  text-align: center;
+  color: #26201A;
+  border: 1px solid #26201A;
+  border-radius: 32px;
+  height: 32px;
+}
+
+/* Create an active/current tablink class */
+
+.tab__link.active {
+  background-color: #FF9556;
+  color: #ffffff;
+  border-color: #FF9556;
+}
+
+/* Style the tab content */
+
+.tab__content {
+  display: none;
+  padding-top: 32px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+.tab__content p {
+  opacity: 0.5;
+}
+
+.tab__content p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.tab__content.active {
+  display: block;
+}
+
+/* Fade in tabs */
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .testimonials {
