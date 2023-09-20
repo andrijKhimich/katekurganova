@@ -975,6 +975,10 @@ main {
 .product-card__img img {
   height: 100%;
   aspect-ratio: auto 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .product-card__title {

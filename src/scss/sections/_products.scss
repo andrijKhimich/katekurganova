@@ -64,6 +64,8 @@
       img {
         height: 100%;
         aspect-ratio: auto 4/3;
+        object-fit: cover;
+        object-position: top;
       }
     }
 
