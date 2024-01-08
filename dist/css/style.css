@@ -1114,6 +1114,15 @@ main {
   gap: 10px;
 }
 
+.tab_lg {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tab_lg .tab__link {
+  height: auto;
+}
+
 /* Style the buttons inside the tab */
 
 .tab__link {

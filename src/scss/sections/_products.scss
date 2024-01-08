@@ -187,13 +187,16 @@
 
 /* Style the tab */
 .tab {
-  // overflow: hidden;
-  // border: 1px solid #ccc;
-  // background-color: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  &_lg {
+    flex-wrap: wrap;
+    .tab__link {
+      height: auto;
+    }
+  }
 }
 
 /* Style the buttons inside the tab */
