@@ -131,7 +131,6 @@ const showMoreText = () => {
   let buttons = document.querySelectorAll('.btn-more');
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      console.log('show');
       button.classList.toggle('active');
       let text = button.parentElement.previousElementSibling;
       if (text.style.maxHeight) {
