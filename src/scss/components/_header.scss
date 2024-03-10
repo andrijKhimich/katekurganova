@@ -41,7 +41,7 @@
 
     &:not(:first-child) {
       &::before {
-        content: "";
+        content: '';
         width: 1px;
         height: 18px;
         background-color: $black;

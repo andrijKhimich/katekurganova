@@ -4,10 +4,11 @@
 // @import "../../node_modules/swiper/swiper-bundle.min.css";
 // @import "../../node_modules/jquery-nice-select/css/nice-select.css";
 
-@import "../../node_modules/swiper/swiper-bundle.min.css";
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 
-@import "base/index";
-@import "components/index";
-@import "sections/index";
+@import 'base/index';
+@import 'components/index';
+@import 'sections/index';
 
-@import "pages/index";
+@import 'pages/index';
+@import 'pages/mentoring';
