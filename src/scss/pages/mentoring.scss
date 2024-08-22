@@ -13,17 +13,23 @@
     line-height: 1.4em;
   }
   &-wrapper {
-    padding: 16px;
+    padding: 48px 16px 16px 16px;
     max-width: 1600px;
     margin: 0 auto;
     @include m(1024) {
-      padding: 24px;
+      padding: 48px 24px 24px 24px;
     }
     @include m(1280) {
-      padding: 32px;
+      padding: 48px 32px 32px 32px;
     }
     @include m(1440) {
-      padding: 48px;
+      padding: 60px 48px 48px 48px;
+    }
+    .header__btn {
+      top: -34px;
+      @include m(1440) {
+        top: -43px;
+      }
     }
   }
 

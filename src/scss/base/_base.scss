@@ -513,7 +513,8 @@ main {
   border-radius: 50px;
   font-size: 16px;
   white-space: nowrap;
-  transition: background-color $hover-duration $timing,
+  transition:
+    background-color $hover-duration $timing,
     color $hover-duration $timing;
   &:hover {
     // background-color: $primary;
@@ -597,11 +598,15 @@ main {
 }
 
 .anim-top {
-  transition: transform $duration $timing, opacity $duration $timing;
+  transition:
+    transform $duration $timing,
+    opacity $duration $timing;
 }
 
 .anim-top_lg {
-  transition: transform $duration $timing, opacity $duration $timing;
+  transition:
+    transform $duration $timing,
+    opacity $duration $timing;
 }
 
 .anim-top_lg.in-view-detect {
@@ -621,6 +626,15 @@ main {
 .anim-top.in-view-detect {
   opacity: 0.001;
   transform: translateY(40px);
+}
+.fade-in {
+  transition: opacity $duration $timing;
+}
+.fade-in.in-view-detect {
+  opacity: 0;
+}
+.fade-in.in-view {
+  opacity: 1;
 }
 
 .anim-top.in-view {
