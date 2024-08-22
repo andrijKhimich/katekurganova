@@ -33,7 +33,10 @@
     max-width: 490px;
     &.anim-top_lg.in-view {
       opacity: 1;
-      transform: translateY(-23px);
+      transform: translateY(-3px);
+      @include m(860) {
+        transform: translateY(-23px);
+      }
     }
     .btn {
       text-transform: uppercase;
